@@ -1,0 +1,75 @@
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\appsettings.json
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Manejo de Tareas.staticwebassets.runtime.json
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Manejo de Tareas.exe
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Manejo de Tareas.deps.json
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Manejo de Tareas.runtimeconfig.json
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Manejo de Tareas.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Manejo de Tareas.pdb
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.RazorAssemblyInfo.cache
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.RazorAssemblyInfo.cs
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\staticwebassets\msbuild.Manejo de Tareas.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\staticwebassets\msbuild.build.Manejo de Tareas.props
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Manejo de Tareas.props
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Manejo de Tareas.props
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\scopedcss\bundle\Manejo de Tareas.styles.css
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\scopedcss\projectbundle\Manejo de Tareas.bundle.scp.css
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\refint\Manejo de Tareas.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.pdb
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\ref\Manejo de Tareas.dll

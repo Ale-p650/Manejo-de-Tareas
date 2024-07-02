@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Manejo de Tareas.props" />
+</Project>
