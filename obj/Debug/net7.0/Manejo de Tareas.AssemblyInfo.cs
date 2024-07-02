@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Manejo de Tareas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e41359c143cbcc003420e9615946ffcce4fff73")]
 [assembly: System.Reflection.AssemblyProductAttribute("Manejo de Tareas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Manejo de Tareas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

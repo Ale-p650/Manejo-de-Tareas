@@ -1,9 +1,10 @@
 ﻿using Manejo_de_Tareas.Entidades;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Manejo_de_Tareas
 {
-    public class ApplicationDBContext :DbContext
+    public class ApplicationDBContext :IdentityDbContext
     {
         public ApplicationDBContext(DbContextOptions options) :base (options)
         {

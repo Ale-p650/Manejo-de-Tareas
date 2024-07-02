@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Manejo_de_Tareas</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Manejo_de_Tareas.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body{
+            background-image: url('https://wallpapers.com/images/featured/notebook-background-vo962ec6p7mb0jw4.jpg')
+        }
+    </style>
+</head>
+<body style="margin:0">
+    
+    <div style="display:flex;justify-content:center;align-items:center;height:100vh">
+        
+        <div style="margin-right:5rem">
+            <h1>Tareas MVC</h1>
+            <h4>En esta app podrás gestionar tus tareas </h4>
+        </div>
+
+        
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

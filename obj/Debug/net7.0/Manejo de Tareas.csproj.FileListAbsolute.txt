@@ -73,3 +73,5 @@ C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\refint\Manejo de Tare
 C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.pdb
 C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\ref\Manejo de Tareas.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.sourcelink.json

@@ -1,12 +1,39 @@
 using Manejo_de_Tareas;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+var policyUsuarios = new AuthorizationPolicyBuilder()
+    .RequireAuthenticatedUser()
+    .Build();
+
+
+builder.Services.AddControllersWithViews(
+    options=> options.Filters.Add
+    (new AuthorizeFilter(policyUsuarios)));
 
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer("name=Conn"));
+
+builder.Services.AddAuthentication();
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>
+    (options =>
+    {
+        options.SignIn.RequireConfirmedAccount = false;
+    }
+    ).AddEntityFrameworkStores<ApplicationDBContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.PostConfigure<CookieAuthenticationOptions>(IdentityConstants.ApplicationScheme,
+    options =>
+    {
+        options.LoginPath = "/usuarios/login";
+        options.AccessDeniedPath = "/usuarios/login";
+    });
 
 var app = builder.Build();
 
@@ -22,7 +49,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
