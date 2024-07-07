@@ -1,0 +1,48 @@
+﻿@model UsuariosListado_ViewModel
+@{
+    ViewData["Title"] = "Listado de Usuarios";
+    Layout = "../Shared/_Layout";
+}
+
+@if (Model.Mensaje is not null)
+{
+    <div class="alert alert-success" role="alert">
+        @Model.Mensaje
+    </div>
+}
+
+@if(Model.Usuarios is not null)
+{
+    <form method="post">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>Accion</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(Usuario_ViewModel usuario in Model.Usuarios)
+                {
+                    <tr>
+                        <td>
+                            <button class="btn btn-primary me-3" 
+                            asp-action="HacerAdmin" asp-route-email="@usuario.Email">
+                                <b style="font-size:1.4rem">+ </b>Asignar Admin
+                                </button>
+                            <button class="btn btn-danger me-3"
+                                    asp-action="RemoverAdmin" asp-route-email="@usuario.Email">
+                                <b style ="font-size:1.4rem">- </b>Quitar Admin
+                            </button>
+                        </td>
+                        <td>@usuario.Email</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+}
+else
+{
+    <p>No Hay Usuarios</p>
+}

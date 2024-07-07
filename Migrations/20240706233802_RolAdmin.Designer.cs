@@ -4,6 +4,7 @@ using Manejo_de_Tareas;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ManejodeTareas.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240706233802_RolAdmin")]
+    partial class RolAdmin
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,13 +105,7 @@ namespace ManejodeTareas.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
-                    b.Property<string>("UsuarioCreacionId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UsuarioCreacionId");
 
                     b.ToTable("Tareas");
                 });
@@ -331,17 +328,6 @@ namespace ManejodeTareas.Migrations
                         .IsRequired();
 
                     b.Navigation("Tarea");
-                });
-
-            modelBuilder.Entity("Manejo_de_Tareas.Entidades.Tarea", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "UsuarioCreacion")
-                        .WithMany()
-                        .HasForeignKey("UsuarioCreacionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("UsuarioCreacion");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

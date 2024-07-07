@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "Manejo de Tareas/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.MicrosoftAccount": "7.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0",
@@ -56,6 +57,14 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.MicrosoftAccount/7.0.0": {
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51819"
           }
         }
       },
@@ -674,6 +683,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.MicrosoftAccount/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eMeeTIJAj5AwRSUDagsZmM3EGYF1lbNv96mlzzMNouBooZUyHFesuFCM8FnIzEuwcVzZWDhq2pjM9NzdT+1jCQ==",
+      "path": "microsoft.aspnetcore.authentication.microsoftaccount/7.0.0",
+      "hashPath": "microsoft.aspnetcore.authentication.microsoftaccount.7.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/7.0.0": {
       "type": "package",

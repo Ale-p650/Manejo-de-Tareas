@@ -75,3 +75,4 @@ C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.genr
 C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\ref\Manejo de Tareas.dll
 C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Usuario\Desktop\Manejo de Tareas\obj\Debug\net7.0\Manejo de Tareas.sourcelink.json
+C:\Users\Usuario\Desktop\Manejo de Tareas\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll

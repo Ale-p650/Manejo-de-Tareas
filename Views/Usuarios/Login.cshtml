@@ -1,40 +1,49 @@
-﻿@model Registro_ViewModel
+﻿@model Login_ViewModel
 @{
-    ViewData["Title"] = "Registro";
-    //Layout = "~/Views/Usuarios/_Layout.cshtml";
+    ViewData["Title"] = "Login";
 }
 
-<h1>Registrate</h1>
+<h1>Login</h1>
+
+@if (ViewData.Keys.Contains("Mensaje"))
+{
+    <p style="color:red">
+        @ViewData["Mensaje"]
+    </p>
+}
 
 <div class="card" style="background-color:antiquewhite">
     <div class="card-body">
-        <form asp-action="Registro">
+        <form asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="my-3">
+            <div class="mb-3">
                 <label asp-for="Email" class="form-label"></label>
-                <input asp-for="Email" class="form-control" />
+                <input asp-for="Email" class="form-control"/>
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
 
-            <div class="my-3">
+            <div class="mb-3">
                 <label asp-for="Password" class="form-label"></label>
                 <input asp-for="Password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
-            <button class="btn btn-success">Registrarse</button>
+            <div class="mb-3">
+                <label asp-for="Recuerdame" class="form-check-label"></label>
+                <input asp-for="Recuerdame" type="checkbox" class="form-check-input" />
+                
+            </div>
+
+            <button class="btn btn-primary">Login</button>
             <a class="btn btn-primary asp-action="LoginExterno" asp-route-proovedor="Microsoft">
                 Continuar con <b>Microsoft</b>
             </a>
+            <a class="btn btn-success" asp-action="registro">Crear Cuenta</a>
         </form>
     </div>
-    
-</div>
-<div class="mt-2">
-    <a class="btn-primary ms-5" asp-action="Login">Ya estoy registrado</a>
 </div>
 
 @section Scripts{
-    <partial name="_ValidationScriptsPartial"></partial>
+    <partial name="_ValidationScriptsPartial"/>
 }
