@@ -5,7 +5,7 @@ namespace Manejo_de_Tareas.Entidades
 {
     public class Tarea
     {
-        public int Id { get; set; }
+        public int Id { get; set; }  
 
         [StringLength(250)]
         [Required]

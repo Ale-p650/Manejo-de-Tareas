@@ -7,14 +7,14 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var policyUsuarios = new AuthorizationPolicyBuilder()
-    .RequireAuthenticatedUser()
-    .Build();
+//var policyUsuarios = new AuthorizationPolicyBuilder()
+//    .RequireAuthenticatedUser()
+//    .Build();
 
-
-builder.Services.AddControllersWithViews(
-    options=> options.Filters.Add
-    (new AuthorizeFilter(policyUsuarios)));
+builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews(
+//    options=> options.Filters.Add
+//    (new AuthorizeFilter(policyUsuarios)));
 
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer("name=Conn"));
 
