@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4ZysNq9EQcxtOl7jBhXI3dzF46yfX5wRp6pMW0J3k3o=",
+  "Hash": "i5Kv6Q7GYmKcKu8X9OoU7GHdaQsO0viD2iGC0QjIHkY=",
   "Source": "Manejo de Tareas",
   "BasePath": "_content/Manejo de Tareas",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\tareas.js"
+    },
+    {
+      "Identity": "C:\\Users\\Usuario\\Desktop\\Manejo de Tareas\\wwwroot\\js\\utilidades.js",
+      "SourceId": "Manejo de Tareas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Usuario\\Desktop\\Manejo de Tareas\\wwwroot\\",
+      "BasePath": "_content/Manejo de Tareas",
+      "RelativePath": "js/utilidades.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\utilidades.js"
     },
     {
       "Identity": "C:\\Users\\Usuario\\Desktop\\Manejo de Tareas\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

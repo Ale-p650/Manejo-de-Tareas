@@ -9,13 +9,14 @@
 </div>
 
 <div id="contenedor-listado-tareas" class="text-center">
-    <div class="text-start" data-bind="foreach: tareas">
+    <div class="text-start" id="reordenable" data-bind="foreach: tareas">
         <div name="tarea" class="border mb-2 p-2" style="cursor: pointer">
             <div data-bind="text: titulo, hidden: esNuevo" class="fw-bold">
             </div>
 
             <input type="text" name="titulo-tarea" autocomplete="off"
             data-bind="value: titulo, visible: esNuevo,
+            attr:{'data-id':id},
             event: {focusout: manejarFocusOutTituloTarea}" />
         </div>
     </div>
@@ -32,6 +33,7 @@
 @section Scripts{
 
     <script src="~/js/tareas.js" asp-append-version="true"></script>
+    <script src="~/js/utilidades.js" asp-append-version="true"></script>
 
     <script>
 
@@ -67,3 +69,4 @@
         ko.applyBindings(tareaListadoViewModel, document.getElementById('contenedor-listado-tareas'));
     </script>
 }
+

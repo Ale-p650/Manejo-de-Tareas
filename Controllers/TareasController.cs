@@ -69,6 +69,32 @@ namespace Manejo_de_Tareas.Controllers
             return tarea;
         }
 
+        [HttpPost("ordenar")]
+        public async Task<IActionResult> Ordenar([FromBody] int[] ids)
+        {
+            var usuarioId = _servicioUsuarios.obtenerUsuarioID();
+
+            var tareas = await _context.Tareas
+                .Where(t => t.UsuarioCreacionId == usuarioId)
+                .ToListAsync();
+
+            var tareasId = tareas.Select(t => t.Id);
+
+            var tareasDict = tareas.ToDictionary(x => x.Id);
+
+            for (int i = 0; i < ids.Length; i++)
+            {
+                var id = ids[i];
+                var tarea = tareasDict[id];
+                tarea.Orden = i + 1;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+
 
     }
 }
