@@ -38,6 +38,21 @@ namespace Manejo_de_Tareas.Controllers
             return Ok(tareas);
         }
 
+        [HttpGet("{id}:int")]
+        public async Task<ActionResult<Tarea>> Get(int id)
+        {
+            var usuarioId = _servicioUsuarios.obtenerUsuarioID();
+            var tarea = await _context.Tareas.FirstOrDefaultAsync
+                (t => t.Id == id && t.UsuarioCreacionId == usuarioId );
+
+            if(tarea is null)
+            {
+                return NotFound();
+            }
+
+            return tarea;
+        }
+
         [HttpPost]
         public async Task<ActionResult<Tarea>> Post([FromBody]string titulo)
         {
@@ -91,6 +106,45 @@ namespace Manejo_de_Tareas.Controllers
 
             await _context.SaveChangesAsync();
 
+            return Ok();
+        }
+
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> EditarTarea(int id, [FromBody] TareaEditarDTO tareaEditar)
+        {
+            var usuarioId = _servicioUsuarios.obtenerUsuarioID();
+
+            var tarea = await _context.Tareas
+                .FirstOrDefaultAsync(t => t.Id == id && t.UsuarioCreacionId == usuarioId );
+
+            if(tarea is null)
+            {
+                return NotFound();
+            }
+
+            tarea.Titulo = tareaEditar.Titulo;
+            tarea.Descripcion = tareaEditar.Descripcion;
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> BorrarTarea(int id)
+        {
+            var usuarioId = _servicioUsuarios.obtenerUsuarioID();
+
+            var tarea = _context.Tareas
+                .FirstOrDefaultAsync(t => t.Id == id && t.UsuarioCreacionId == usuarioId);
+
+            if(tarea is null)
+            {
+                return NotFound();
+            }
+
+            _context.Remove(tarea);
+            await _context.SaveChangesAsync();
             return Ok();
         }
 
