@@ -12,7 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 //    .RequireAuthenticatedUser()
 //    .Build();
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler
+= System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles);
 //builder.Services.AddControllersWithViews(
 //    options=> options.Filters.Add
 //    (new AuthorizeFilter(policyUsuarios)));

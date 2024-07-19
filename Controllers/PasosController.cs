@@ -63,5 +63,55 @@ namespace Manejo_de_Tareas.Controllers
             return paso;
 
         }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(Guid id, [FromBody] PasoCrearDTO pasoCrear)
+        {
+            var usuarioId = _servicioUsuarios.obtenerUsuarioID();
+
+            var paso = await _context.Pasos.Include(p => p.TareaId).FirstOrDefaultAsync(p => p.Id == id);
+        
+            if(paso is null)
+            {
+                return NotFound();
+            }
+        
+            if(paso.Tarea.UsuarioCreacionId != usuarioId)
+            {
+                return Forbid();
+            }
+
+            paso.Descripcion = pasoCrear.Descripcion;
+            paso.Realizado = pasoCrear.Realizado;
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(Guid id)
+        {
+            var usuarioId = _servicioUsuarios.obtenerUsuarioID();
+
+            var paso = await _context.Pasos
+                .Include(p => p.Tarea)
+                .FirstOrDefaultAsync(p => p.Id == id);
+
+            if(paso is null)
+            {
+                return NotFound();
+            }
+
+            if(paso.Tarea.UsuarioCreacionId != usuarioId)
+            {
+                return Forbid();
+            }
+
+            _context.Remove(paso);
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
     }
 }

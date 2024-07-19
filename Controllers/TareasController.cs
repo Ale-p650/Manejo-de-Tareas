@@ -42,7 +42,10 @@ namespace Manejo_de_Tareas.Controllers
         public async Task<ActionResult<Tarea>> Get(int id)
         {
             var usuarioId = _servicioUsuarios.obtenerUsuarioID();
-            var tarea = await _context.Tareas.FirstOrDefaultAsync
+
+            var tarea = await _context.Tareas
+                .Include(t=>t.Pasos)
+                .FirstOrDefaultAsync
                 (t => t.Id == id && t.UsuarioCreacionId == usuarioId );
 
             if(tarea is null)
