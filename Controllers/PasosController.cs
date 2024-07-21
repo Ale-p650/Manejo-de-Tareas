@@ -113,5 +113,36 @@ namespace Manejo_de_Tareas.Controllers
 
             return Ok();
         }
+
+        [HttpPost("ordenar/{tareaId:int}")]
+        public async Task<IActionResult> Ordenar(int tareaId, [FromBody] Guid[] ids)
+        {
+            var usuarioId = _servicioUsuarios.obtenerUsuarioID();
+
+            var tarea = await _context.Tareas
+                .FirstOrDefaultAsync(t => t.Id == tareaId && t.UsuarioCreacionId==usuarioId);
+        
+            if(tarea is null)
+            {
+                return NotFound();
+            }
+
+            var pasos = await _context.Pasos.Where(p => p.TareaId == tareaId).ToListAsync();
+
+            var pasosId = pasos.Select(p => p.Id);
+
+            var pasosDiccionario = pasos.ToDictionary(p => p.Id);
+
+            for (int i = 0; i < ids.Length; i++)
+            {
+                var pasoId = ids[i];
+                var paso = pasosDiccionario[pasoId];
+                paso.Orden = i + 1;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
     }
 }

@@ -8,7 +8,11 @@ namespace Manejo_de_Tareas.Servicios
     {
         public AutoMapperProfiles()
         {
-            CreateMap<Tarea, TareaDTO>().ReverseMap();
+            CreateMap<Tarea, TareaDTO>()
+                .ForMember(dto => dto.PasosTotales, ent => ent
+                .MapFrom(t => t.Pasos.Count()))
+                .ForMember(dto => dto.PasosRealizados, ent => ent
+                .MapFrom(t => t.Pasos.Where(p => p.Realizado).Count()));
         }
     }
 }
