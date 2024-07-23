@@ -26,4 +26,91 @@ async function manejarSeleccionArchivoTarea(event) {
     }
 
     const json = await respuesta.json();
+    prepararArchivosAdjuntos(json);
+}
+
+function prepararArchivosAdjuntos(archivosAdjuntos) {
+    archivosAdjuntos.forEach(archivoAdjunto => {
+        let fechaCreacion = archivoAdjunto.fechaCreacion;
+        if (archivoAdjunto.fechaCreacion.indexOf('Z') === -1) {
+            fechaCreacion += 'Z';
+        }
+
+        const fechaCreacionDT = new Date(fechaCreacion);
+        archivoAdjunto.publicado = fechaCreacionDT.toLocaleString();
+
+        tareaEditarVM.archivosAdjuntos
+            .push(new archivoAdjuntoViewModel({ ...archivoAdjunto, modoEdicion: false }))
+    })
+}
+
+let tituloArchivoAdjuntoAnterior;
+
+function manejarClickTituloArchivoAdjunto(archivoAdjunto) {
+    archivoAdjunto.modoEdicion(true);
+    tituloArchivoAdjuntoAnterior = archivoAdjunto.titulo();
+    $("[name='txtArchivoAdjuntoTitulo']:visible").focus();
+}
+
+async function manejarFocusOutTituloArchivoAdjunto(archivoAdjunto) {
+
+    archivoAdjunto.modoEdicion(false);
+    const idTarea = archivoAdjunto.id;
+
+    if (!archivoAdjunto.titulo()) {
+
+        archivoAdjunto.titulo(tituloArchivoAdjuntoAnterior);
+    }
+
+    if (archivoAdjunto.titulo() === tituloArchivoAdjuntoAnterior) {
+        return;
+    }
+
+    const data = JSON.stringify(archivoAdjunto.titulo());
+
+    const respuesta = await fetch('${urlArchivos}/${idTarea}', {
+        body: data,
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    if (!respuesta.ok()) {
+        manejarErrorAPI(respuesta);
+    }
+
+
+}
+
+function manejarClickBorrarArchivoAdjunto(archivoAdjunto) {
+    modalEditarTareaBootstrap.hide();
+
+    confirmarAccion({
+        callbackAceptar: () => {
+            borrarArchivoAdjunto(archivoAdjunto)
+            modalEditarTareaBootstrap.show();
+        },
+        callBackCancelar: () => {
+            modalEditarTareaBootstrap.show();
+        },
+        titulo: 'Desea borrar este archivo?'
+    });
+}
+
+async function borrarArchivoAdjunto(archivoAdjunto) {
+    const respuesta = await fetch('${urlArchivos}/${archivoAdjunto.id}', {
+
+        method: 'DELETE',
+
+    });
+
+    if (!respuesta.ok) {
+        manejarErrorAPI(respuesta);
+        return;
+    }
+
+    tareaEditarVM.archivosAdjuntos.remove(function (item) {
+        return item.id == archivoAdjunto.id
+    });
 }

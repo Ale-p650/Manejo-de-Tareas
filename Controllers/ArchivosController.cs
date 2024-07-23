@@ -66,5 +66,60 @@ namespace Manejo_de_Tareas.Controllers
 
             return archivosAdjuntos.ToList();
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(Guid id, [FromBody] string titulo)
+        {
+            var usuarioId = _servicioUsuarios.obtenerUsuarioID();
+
+            var archivoAdjunto = await _context.ArchivosAdjuntos
+                .Include(a=>a.Tarea)
+                .FirstOrDefaultAsync(a => a.Id == id);
+
+            if(archivoAdjunto is null)
+            {
+                return NotFound();
+            }
+
+            if (archivoAdjunto.Tarea.UsuarioCreacionId != usuarioId)
+            {
+                return Forbid();
+            }
+
+            archivoAdjunto.Titulo = titulo;
+
+            await _context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var usuarioId = _servicioUsuarios.obtenerUsuarioID();
+
+            var archivoAdjunto = await _context.ArchivosAdjuntos
+                                .Include(a=>a.Tarea)
+                                .FirstOrDefaultAsync(a => a.Id == id);
+
+            if(archivoAdjunto is null)
+            {
+                return NotFound();
+            }
+
+            if (archivoAdjunto.Tarea.UsuarioCreacionId != usuarioId)
+            {
+                return Forbid();
+            }
+
+            _context.Remove(archivoAdjunto);
+            await _context.SaveChangesAsync();
+
+            await _almacenadorArchivos.Borrar(archivoAdjunto.Url, contenedor);
+
+            return Ok();
+
+
+        }
     }
 }
