@@ -114,3 +114,7 @@ async function borrarArchivoAdjunto(archivoAdjunto) {
         return item.id == archivoAdjunto.id
     });
 }
+
+function manejarClickDescargarArchivoAdjunto(archivoAdjunto) {
+    descargarArchivo(archivoAdjunto.url, archivoAdjunto.titulo());
+}
